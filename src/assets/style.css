@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply font-base  bg-[#f1f1f1];
+  }
+
+  .container {
+    @apply w-full px-4 max-w-7xl relative  lg:px-6 2xl:px-0;
+  }
+}
