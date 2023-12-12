@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-import { RouterView } from "vue-router";
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div
@@ -35,12 +33,14 @@ import { RouterView } from "vue-router";
         </div>
       </div>
       <div
-        class="w-full h-full min-h-[90svh] lg:w-[50%] flex justify-center items-center px-3 lg:px-0 lg:bg-gray-50 lg:min-h-[85svh] 2xl:h-[85svh]"
+        class="w-full h-full min-h-[100svh] lg:w-[50%] flex justify-center items-center px-3 lg:px-0 lg:bg-gray-50 lg:min-h-[85svh] 2xl:h-[85svh] py-7"
       >
         <div
-          class="w-full h-full flex md:justify-center px-4 py-6 md:w-[70%] md:px-8 lg:w-full lg:px-6 xl:px-10 2xl:px-12 bg-gray-50"
+          class="w-full h-full flex md:justify-center px-4 py-8 md:w-[70%] md:px-8 lg:w-full lg:px-6 xl:px-10 2xl:px-12 bg-gray-50 justify-center items-center"
         >
-          <RouterView />
+          <div>
+            <RouterView />
+          </div>
         </div>
       </div>
     </div>

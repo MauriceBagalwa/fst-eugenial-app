@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Login from "@/components/auth/SignIn.vue";
 import AuthLayout from "@/layouts/AuthLayout.vue";
+import AppLayout from "@/layouts/AppLayout.vue";
 
 import Index from "@/views/index.vue";
 
@@ -19,11 +20,20 @@ const router = createRouter({
           name: "signin",
           path: "/signin",
           component: Login,
-          meta:{
-            layout:'auth-layout'
-          }
+          meta: {
+            layout: "auth-layout",
+          },
         },
       ],
+    },
+    {
+      name: "app",
+      path: "/app",
+      component: AppLayout,
+      meta: {
+        layout: "app-layout",
+      },
+      children: [],
     },
   ],
 });

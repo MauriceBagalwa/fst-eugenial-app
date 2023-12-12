@@ -15,7 +15,7 @@ watch(
 </script>
 
 <template>
-  <div>
+  <div class>
     <component :is="layout" />
   </div>
 
