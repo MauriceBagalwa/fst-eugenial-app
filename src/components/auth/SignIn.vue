@@ -14,7 +14,7 @@ const _fields = [
     field_name: "Email",
     placeholder: "Enter your email",
     as: "input",
-    type: "email",
+    type: "text",
     rules: "required|email",
   },
   {
@@ -40,9 +40,7 @@ const { handleSubmit, resetForm } = useForm({
 
 // Methodes
 const _submit = handleSubmit((values) => {
-  // alert(JSON.stringify(values, null, 2));
   resetForm();
-
   router.push({ name: "app" });
 });
 
