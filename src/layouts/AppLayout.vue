@@ -5,15 +5,14 @@ import TopBar from "@/components/app/menus/TopBar.vue";
 
 <template>
   <div class="bg-[#f1f1f1]">
-    <div class="w-full flex gap-0  min-h-[100svh] py-5 px-10 bg-gray-50">
-     <!-- <div class="w-full h-full"> -->
+    <div class="w-full flex gap-0 min-h-[100svh] py-2 px-10">
       <SideBar />
-      <div class="flex flex-col flex-1 px-2">
+      <div class="flex flex-col flex-1 bg-gray-50 py-5 border-l">
         <TopBar />
-        <div class="bg-red-200 flex-1"></div>
+        <div class="flex-1 px-8">
+          <RouterView />
+        </div>
       </div>
-     </div>
-    <!-- </div> -->
-    <!-- </div> -->
+    </div>
   </div>
 </template>

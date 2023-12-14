@@ -10,33 +10,30 @@ import {
 } from "@heroicons/vue/24/outline";
 import i from "interface";
 
-const _name = "bin bagalwa";
-const _function = "admnistarteur";
-
 const _menus: Array<i.IMenu> = [
   {
     name: "dashbord",
-    link: "/",
+    link: "/app/dashbord",
     icon: Squares2X2Icon,
   },
   {
     name: "services",
-    link: "/",
+    link: "/app/services",
     icon: ArrowUpOnSquareIcon,
   },
   {
     name: "rdv",
-    link: "/",
+    link: "/app/rdv",
     icon: UserGroupIcon,
   },
   {
     name: "caisse",
-    link: "/",
+    link: "/app/caisse",
     icon: BanknotesIcon,
   },
   {
     name: "paramètres",
-    link: "/",
+    link: "/app/settings",
     icon: AdjustmentsVerticalIcon,
   },
 ];
@@ -44,15 +41,17 @@ const _menus: Array<i.IMenu> = [
 
 <template>
   <div
-    class="w-64 bg-gray-50 py-2 rounded-l pl-5 flex flex-col justify-between"
+    class="w-64 bg-gray-50 rounded-l pl-5 flex flex-col justify-between py-5"
   >
-    <div class="h-14 flex items-center">
-      <Logo class="w-11 object-contain" />
+    <div class="h-16 flex items-center">
+      <a :href="_menus[0].link">
+        <Logo class="w-11 object-contain" />
+      </a>
     </div>
     <div class="flex-1 py-5 flex flex-col gap-12 justify-center">
       <div v-for="_menu in _menus">
-        <a
-          :href="_menu.link"
+        <RouterLink
+          :to="_menu.link"
           class="flex gap-3 items-center text-[15.5px] font-semibold capitalize text-gray-500 hover:text-[#007DFC] group"
         >
           <component
@@ -60,7 +59,7 @@ const _menus: Array<i.IMenu> = [
             class="w-6 h-6 text-gray-400 group-hover:text-[#007DFC]"
           />
           {{ _menu.name }}
-        </a>
+        </RouterLink>
       </div>
 
       <div
@@ -87,19 +86,12 @@ const _menus: Array<i.IMenu> = [
         </div>
       </div>
     </div>
-    <!-- <div class="flex gap-3 cursor-pointer">
-      <img src="/images/_profile.png" alt="" class="rounded-full w-11 h-11" />
-      <div class="flex flex-col justify-center text-gray-700 -gap-2">
-        <p class="text-[12px] font-bold text-gray-800">{{ _name }}</p>
-        <p class="text-[10.5px] font-semibold text-gray-400">
-          {{ _function }}
-        </p>
-      </div>
-    </div> -->
 
     <div>
-      <h2 class="font-extrabold text-xl mb-3">Eugenial</h2>
-      <p class="text-[12px] text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      <h2 class="font-bold text-xl mb-3">Eugenial</h2>
+      <p class="text-[12px] text-gray-400">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
     </div>
   </div>
 </template>
