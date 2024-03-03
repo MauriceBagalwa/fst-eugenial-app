@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Logo from "@/assets/svg/logo.svg";
-import { computed, reactive, ref } from "vue";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { Form, useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/yup";

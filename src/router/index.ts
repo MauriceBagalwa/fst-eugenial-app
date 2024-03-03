@@ -1,18 +1,16 @@
+import Enterprise from "@/components/app/interfaces/settings/enterprise/index.vue";
+import Personel from "@/components/app/interfaces/settings/personel/index.vue";
+import Service from "@/components/app/interfaces/settings/service/index.vue";
+import Others from "@/components/app/interfaces/settings/Others.vue";
 import { createRouter, createWebHistory } from "vue-router";
-import Login from "@/components/auth/SignIn.vue";
 import AuthLayout from "@/layouts/AuthLayout.vue";
+import Login from "@/components/auth/SignIn.vue";
 import AppLayout from "@/layouts/AppLayout.vue";
-// import ServiceLayout from "@/layouts/Service.vue";
 import DashBord from "@/views/Dashbord.vue";
 import Services from "@/views/Services.vue";
-import Rdv from "@/views/Rdv.vue";
-import Caisse from "@/views/Caisse.vue";
 import Settings from "@/views/Settings.vue";
-
-import Enterprise from "@/components/app/interfaces/settings/Enterprise.vue";
-import Personel from "@/components/app/interfaces/settings/Personel.vue";
-import Service from "@/components/app/interfaces/settings/Service.vue";
-import Others from "@/components/app/interfaces/settings/Others.vue";
+import Caisse from "@/views/Caisse.vue";
+import Rdv from "@/views/Rdv.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

@@ -14,12 +14,12 @@ const _function = "admnistarteur";
   >
     <div class="w-[40%]">
       <!-- <p class="mr-5">Hello top bar dddddd</p> -->
-      <div class="flex  border rounded-md w-72 items-center px-2 ">
+      <div class="flex  border rounded-md w-52 items-center px-2 ">
         <MagnifyingGlassIcon class="w-5 h-5" />
         <input
           type="text"
           placeholder="Make global search"
-          class="p-2 focus:outline-none text-[14px] flex-1 bg-gray-50"
+          class="p-2 focus:outline-none text-[11.7px] flex-1 bg-transparent"
         />
       </div>
     </div>
