@@ -2,7 +2,7 @@
 import i from "interface";
 import { useField } from "vee-validate";
 
-const { _input } = defineProps<{ _input: i.I_Input }>();
+const { _input } = defineProps<{ _input: i.I_Input; _class?: any }>();
 
 const { value, errorMessage } = useField(() => _input.id);
 </script>
@@ -18,6 +18,7 @@ const { value, errorMessage } = useField(() => _input.id);
       :placeholder="_input.placeholder"
       :type="_input.type"
       class="w-full p-[10px] border border-gray-200 rounded-sm focus:outline-none font-semibold text-gray-900"
+      :class="_class"
     />
     <span class="text-red-500 text-[12px]">{{ errorMessage }}</span>
   </div>

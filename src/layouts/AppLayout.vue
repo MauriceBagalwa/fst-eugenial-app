@@ -1,12 +1,18 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import SideBar from "@/components/app/menus/SideBar.vue";
+import TopBar from "@/components/app/menus/TopBar.vue";
+</script>
 
 <template>
-  <div
-    class="w-full  bg-orange-400/60 flex justify-center items-center"
-  >
-    <div class="max-w-7xl w-full h-full justify-center items-center bg-red-500 min-h-[100svh]">
-      <p class="text-4xl font-extrabold">Hello Gars</p>
-      <RouterView />
+  <div class="bg-[#f1f1f1]">
+    <div class="w-full flex gap-0 min-h-[100svh] py-2 px-10">
+      <SideBar />
+      <div class="flex flex-col flex-1 bg-gray-50 py-5 border-l">
+        <TopBar />
+        <div class="flex-1 px-8">
+          <RouterView />
+        </div>
+      </div>
     </div>
   </div>
 </template>

@@ -8,3 +8,9 @@ export interface I_Input {
   required?: boolean;
   rules: string;
 }
+
+export interface IMenu {
+  name: string;
+  link: string;
+  icon?: any;
+}
